@@ -4,10 +4,14 @@ import Home from './components/Home';
 import Cds from './components/Cds';
 import Vinyls from './components/Vinyls';
 import Navbar from './components/Navbar';
+import backgroundVideo from "./resources/drumsHD.mp4"
 
 function App() {
   return (
     <>
+      <video id="background-video" autoPlay loop muted>
+        <source src={backgroundVideo} type="video/mp4"/>
+      </video>
       <Navbar />
       <Routes>
           <Route path="/" element={<Home />}/>

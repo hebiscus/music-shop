@@ -2,8 +2,13 @@
   font-family: 'Space Grotesk', sans-serif;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
 }
 
 *, *:before, *:after{
@@ -32,18 +37,6 @@ ol, ul{
   list-style: none;
 }
 
-ul > * {
-  
-  margin: 10px;
-}
 
-ul > * > * {
-  text-decoration: none;
-}
-
-ul > li > *.active {
-  color:red;
-  text-decoration: underline;
-}
 
 
