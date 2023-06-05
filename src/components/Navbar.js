@@ -6,9 +6,15 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-github"></div>
             <ul className="navbar-links">
-                <NavLink to="/cds">CDs</NavLink>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/vinyls">Vinyls</NavLink>
+                <li>
+                    <NavLink to="/cds">CDs</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/">Home</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/vinyls">Vinyls</NavLink>
+                </li>
             </ul>
             <div className="navbar-cart"></div>
         </nav>

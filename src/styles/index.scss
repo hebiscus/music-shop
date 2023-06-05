@@ -33,8 +33,17 @@ ol, ul{
 }
 
 ul > * {
+  
+  margin: 10px;
+}
+
+ul > * > * {
   text-decoration: none;
 }
 
+ul > li > *.active {
+  color:red;
+  text-decoration: underline;
+}
 
 
