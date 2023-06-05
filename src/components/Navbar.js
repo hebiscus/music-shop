@@ -8,7 +8,7 @@ function Navbar() {
             <ul className="navbar-links">
                 <NavLink to="/cds">CDs</NavLink>
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/vinyls">CDs</NavLink>
+                <NavLink to="/vinyls">Vinyls</NavLink>
             </ul>
             <div className="navbar-cart"></div>
         </nav>
