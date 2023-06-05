@@ -1,8 +1,17 @@
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import userEvent from '@testing-library/user-event';
+import {BrowserRouter, MemoryRouter} from 'react-router-dom';
+import React from 'react'
+import App from '../App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders navbar no matter the subpage', () => {
+  render(<App />, {wrapper: MemoryRouter});
+  const cdLink = screen.getByText(/Cds/i);
+  const homeLink = screen.getByText(/Home/i);
+  const vinylLink = screen.getByText(/Vinyls/i);
+  
+  expect(cdLink).toBeInTheDocument();
+  expect(homeLink).toBeInTheDocument();
+  expect(vinylLink).toBeInTheDocument();
 });
