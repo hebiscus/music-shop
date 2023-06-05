@@ -1,7 +1,24 @@
-.navbar {
+@use 'navbar-props';
+
+.navbar, .navbar-github, .navbar-links, .navbar-cart {
     display: flex;
 }
 
-.navbar-links {
-    display: flex;
+.navbar {
+    
+    .navbar-github > img {
+        width: navbar-props.$icons-width;
+    };
+
+    .navbar-links {
+        
+    }
+
+    .navbar-cart > button {
+        background: transparent;
+        width: navbar-props.$icons-width;
+    }
 }
+
+
+
