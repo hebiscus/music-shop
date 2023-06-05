@@ -1,10 +1,14 @@
 import { NavLink } from "react-router-dom";
+import githubLogo from "../resources/logos/github-mark-white.svg"
 
 function Navbar() {
 
     return (
         <nav className="navbar">
-            <div className="navbar-github"></div>
+            <div className="navbar-github">
+                <img src={githubLogo} alt="github logo"></img>
+                <h2>hebiscus</h2>
+            </div>
             <ul className="navbar-links">
                 <li>
                     <NavLink to="/cds">CDs</NavLink>
