@@ -1,4 +1,5 @@
  import ImageSlider from "./ImageSlider";
+ import SpecialOffers from "./SpecialOffers";
  import xtc from "../resources/product-pictures/XTC.png";
  import klark from "../resources/product-pictures/Klark Kent.png";
  import jah from "../resources/product-pictures/jah wurzel.png";
@@ -8,6 +9,7 @@
         <>
             <div className="special-offers">
                 <ImageSlider pictures={VinylPictures} />
+                <SpecialOffers pictures={VinylPictures} />
             </div>
             <div className="additional-info">
 
