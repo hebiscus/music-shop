@@ -1,4 +1,3 @@
- import ImageSlider from "./ImageSlider";
  import SpecialOffers from "./SpecialOffers";
  import xtc from "../resources/product-pictures/XTC.png";
  import klark from "../resources/product-pictures/Klark Kent.png";
@@ -8,11 +7,9 @@
     return (
         <>
             <div className="special-offers">
-                <ImageSlider pictures={VinylPictures} />
                 <SpecialOffers pictures={VinylPictures} />
             </div>
             <div className="additional-info">
-
             </div>
         </>
     )
