@@ -1,6 +1,13 @@
 @use 'navbar-props';
 $font-color: white;
 
+@mixin clearButton() {
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    line-height: normal;
+}
+
 .navbar, .navbar-github, .navbar-links, .navbar-cart {
     display: flex;
 }
@@ -33,6 +40,10 @@ $font-color: white;
 
 .special-offers {
     color: $font-color;
+
+    .slider-arrows {
+        @include clearButton;
+    }
 }
 
 #background-video {

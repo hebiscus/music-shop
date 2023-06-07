@@ -25,18 +25,22 @@ function SpecialOffers({ pictures }) {
         <div className="special-offers">
           <section className="image-slider">
               <div>
-                  <FontAwesomeIcon icon={faAngleLeft} style={{color: "#ffffff",}} onClick={prevSlide} />
+                  <button className="slider-arrows" aria-label="previous slide" onClick={prevSlide}>
+                    <FontAwesomeIcon icon={faAngleLeft} style={{color: "#ffffff",}}/>
+                  </button>
                   {pictures.map((currentImage, index) => {
                       return <div
                       className={index === currentSlide ? 'slide active' : 'slide'}
                       key={index}
                     >
                       {index === currentSlide && (
-                        <img src={currentImage} alt='travel' className='image' />
+                        <img src={currentImage} alt={pictures[index]} className='image' />
                       )}
                     </div>
                   })}
-                  <FontAwesomeIcon icon={faAngleRight} style={{color: "#ffffff",}} onClick={nextSlide} />
+                  <button className="slider-arrows" aria-label="next slide" onClick={nextSlide}>
+                    <FontAwesomeIcon icon={faAngleRight} style={{color: "#ffffff",}}/>
+                  </button>
               </div>
               <div className="slider-dots">
 
