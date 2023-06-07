@@ -51,9 +51,9 @@ function SpecialOffers({ pictures }) {
             : currentSlide === 1 ? "Klark Kent - Don't Care" 
             : "Jah Wurzel - Wuthering Heights"}
             </h1>
-            <p>{currentSlide === 0 ? "vinyl edition of cult classic new wave track you won't be able to find anywhere else"
-            : currentSlide === 1 ? "lost gem" 
-            : "unbelievable..."}
+            <p>{currentSlide === 0 ? "Vinyl edition of cult classic new wave track you won't be able to find anywhere else"
+            : currentSlide === 1 ? "Steward's Copeland most known hit, charting in UK Top 50 in 1978" 
+            : "Exclusive cover of Kate Bush's hit, rare find to come by"}
             </p>
             <h4>Limited Stock</h4>
           </div>
