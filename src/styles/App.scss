@@ -8,6 +8,7 @@ $font-color: white;
     line-height: normal;
 }
 
+
 .navbar, .navbar-github, .navbar-links, .navbar-cart {
     display: flex;
 }
@@ -43,6 +44,15 @@ $font-color: white;
 
     .slider-arrows {
         @include clearButton;
+    }
+}
+
+.additional-info {
+    color: $font-color;
+
+    a {
+        text-decoration: none;
+        color: $font-color;
     }
 }
 
