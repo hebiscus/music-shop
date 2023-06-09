@@ -1,0 +1,27 @@
+@use "App";
+
+.products-render {
+    background-color: #242930;
+    color: App.$font-color;
+}
+
+#background-color {
+    background-color: #242930;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.genres-container {
+
+    & button {
+        color: inherit;
+        @include App.clearButton();
+    }
+}

@@ -1,11 +1,10 @@
-
+import "../styles/Products.scss";
 
 function Products({ products }) {
 
-
-
     return(
-        <div className="">
+        <div className="products-render">
+            <div id="background-color"></div>
             <div className="genres-container">
                 <h2>Genres</h2>
                 <button>new wave</button>
