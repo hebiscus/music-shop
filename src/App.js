@@ -1,9 +1,9 @@
 import './styles/App.scss';
 import { Routes, Route} from "react-router-dom";
 import Home from './components/Home';
-import Cds from './components/Cds';
-import Vinyls from './components/Vinyls';
+import Products from './components/Products';
 import Navbar from './components/Navbar';
+import { cdData, vinylData } from './components/productsData';
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Navbar />
       <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path='/cds' element={<Cds />}/>
-          <Route path='/vinyls' element={<Vinyls />}/>
+          <Route path='/cds' element={<Products products={cdData} />}/>
+          <Route path='/vinyls' element={<Products products={vinylData} />}/>
       </Routes>
     </>
   );
