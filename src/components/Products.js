@@ -1,6 +1,6 @@
 
 
-function Products(products) {
+function Products({ products }) {
 
 
 
@@ -16,7 +16,13 @@ function Products(products) {
                 <button>ambient</button>
             </div>
             <div className="products-container">
-
+                {products.map((product, index) => {
+                    return <div key={index}>
+                        <img src={product.cover} alt={product.title}></img>
+                        <h5>{product.title}</h5>
+                        <p>{product.description}</p>
+                    </div>
+                })}
             </div>
         </div>
     )
