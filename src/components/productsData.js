@@ -42,6 +42,36 @@ const cdData = [
      price: "$300.00"}
 ]
 
-const vinylData = [{}]
+const vinylData = [
+    {title: "XTC - Life Begins At The Hop",
+    cover: "/XTC.png",
+    description: "ababa cnsdkc yes!",
+    price: "$300.00"},
+
+    {title: "Klark Kent - Don't Care",
+     cover: "/Klark Kent.png",
+     description: "ababa cnsdkc yes!",
+     price: "$300.00"},
+
+     {title: "Snips - What's Your Number",
+     cover: "/Snips.png",
+     description: "ababa cnsdkc yes!",
+     price: "$300.00"},
+
+     {title: "Jah Wurzel - Wuthering Heights",
+     cover: "/jah wurzel.png",
+     description: "ababa cnsdkc yes!",
+     price: "$300.00"},
+
+     {title: "Yellow Banana - Verspertine",
+     cover: "/blankV.png",
+     description: "ababa cnsdkc yes!",
+     price: "$300.00"},
+
+     {title: "Summon - My Mind is Blank",
+     cover: "/blankV.png",
+     description: "ababa cnsdkc yes!",
+     price: "$300.00"}
+]
 
 export { cdData, vinylData };
