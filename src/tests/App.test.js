@@ -6,6 +6,7 @@ import React from 'react'
 import App from '../App';
 import SpecialOffers from '../components/SpecialOffers';
 import Home from '../components/Home';
+import Products from '../components/Products';
 
 
 test('renders navbar no matter the subpage', () => {
@@ -55,7 +56,7 @@ describe('special offer rendering', () => {
     const klarkHeadline = screen.getByRole('heading', { name: "Klark Kent - Don't Care" });
     expect(testImage).toBeInTheDocument();
     expect(klarkHeadline).toBeInTheDocument();
-  });
+    });
 });
 
 test('renders additional info on Home correctly', () => {
@@ -67,4 +68,35 @@ test('renders additional info on Home correctly', () => {
   expect(mainParagraph).toBeInTheDocument(); 
   expect(githubLink).toBeInTheDocument();
   expect(linkedinLink).toBeInTheDocument();
+});
+
+describe("rendering Products component", () => {
+  const testProducts = [
+    {title: "Colin Stetson - When we were that wept for the sea",
+    cover: "/blueCD.png",
+    description: "ababa cnsdkc yes!",
+    price: "$30.00"}
+  ];
+
+  test("renders Genres section properly", () => {
+    render (<Products products={testProducts} />)
+
+    const genresHeadline = screen.getByRole("heading", {name: "Genres"});
+    const genresButtons = screen.getAllByRole("button")
+    expect(genresHeadline).toBeInTheDocument();
+    expect(genresButtons).toHaveLength(6);
+  });
+
+  test("renders all products passed in", () => {
+    render (<Products products={testProducts} />)
+
+    const productTitle = screen.getByAltText("Colin Stetson - When we were that wept for the sea");
+    const productImage = screen.getByRole("img", {name: "Colin Stetson - When we were that wept for the sea"});
+
+    expect(productTitle).toBeInTheDocument();
+    expect(productImage).toBeInTheDocument();
+    expect(productImage).toHaveAccessibleName("Colin Stetson - When we were that wept for the sea")
+  })
+
+
 })
