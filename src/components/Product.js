@@ -1,11 +1,12 @@
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-function Product() {
-    let { state } = useLocation();
+function Product({ products }) {
+    const { productTitle } = useParams();
+    const productData = products.filter(product => product.title === productTitle)
 
     return (
         <>
-        {state.title}
+        {productTitle}
         </>
     )
 }

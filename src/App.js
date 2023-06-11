@@ -14,7 +14,8 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path='/cds' element={<Products products={cdData} />}/>
           <Route path='/vinyls' element={<Products products={vinylData} />}/>
-          <Route path='/cds/:id' element={<Product />}/>
+          <Route path='/cds/:productTitle' element={<Product products={cdData} />}/>
+          <Route path='/vinyls/:productTitle' element={<Product products={vinylData} />}/>
       </Routes>
     </>
   );

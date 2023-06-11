@@ -2,7 +2,6 @@ import "../styles/Products.scss";
 import { Link } from 'react-router-dom';
 
 function Products({ products }) {
-    const productPath = `${products[0].title}`
 
     return(
         <div className="products-render">
@@ -19,7 +18,7 @@ function Products({ products }) {
             <div className="products-container">
                 {products.map((product, index) => {
                     return <div key={index}>
-                        <Link to={productPath} state={product}>
+                        <Link to={product.title}>
                             <img src={product.cover} alt={product.title}></img>
                             <h5>{product.title}</h5>
                         </Link>
