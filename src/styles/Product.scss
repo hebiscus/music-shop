@@ -1,0 +1,15 @@
+@use "Products";
+@use "App";
+
+#background-color {
+    @include Products.backgroundSettings();
+};
+
+.product-render {
+    color: App.$font-color;
+
+    & button {
+        color: inherit;
+        @include App.clearButton();
+    }
+}
