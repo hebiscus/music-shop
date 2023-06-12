@@ -19,7 +19,7 @@ function Products({ products }) {
                 {products.map((product, index) => {
                     return <div key={index}>
                         <Link to={product.title}>
-                            <img src={product.cover} alt={product.title}></img>
+                            <img src={product.coverSmall} alt={product.title}></img>
                             <h5>{product.title}</h5>
                         </Link>
                     </div>

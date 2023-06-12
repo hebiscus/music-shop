@@ -14,7 +14,11 @@ function Product({ products }) {
             <div id="background-color"></div>
             <button onClick={() => navigate(-1)}>Go Back</button>
             <div className="product-container">
-                <img src={productData.cover} alt={productData.productTitle}></img>
+                <img 
+
+                    src={productData.coverSmall} 
+                    alt={productData.productTitle}>
+                </img>
                 <h3>{productTitle}</h3>
                 <p>{productData.description}</p>
                 <div className="buy-container">
