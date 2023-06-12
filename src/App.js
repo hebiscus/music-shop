@@ -13,7 +13,12 @@ function App() {
   const [boughtProducts, setBoughtProducts] = useState([]);
 
   function addToCart(product) {
-    setBoughtProducts([...boughtProducts, product]);
+    if (!boughtProducts.includes(product)) {
+      setBoughtProducts([...boughtProducts, product]);
+    }
+    else {
+      return;
+    }
   }
 
   return (
