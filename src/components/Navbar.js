@@ -27,7 +27,6 @@ function Navbar() {
                     <img src={shoppingBasket} alt="shopping-basket"></img>
                 </button> */}
                 <Sidebar />
-                <div></div>
             </div>
         </nav>
     )

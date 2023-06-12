@@ -2,14 +2,6 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import shoppingBasket from "../resources/icons/shopping-basket.svg";
-
-const Nav = styled.div`
-  background: #15171c;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`;
  
 const NavIcon = styled(Link)`
   margin-left: 2rem;
@@ -21,7 +13,7 @@ const NavIcon = styled(Link)`
 `;
  
 const SidebarNav = styled.nav`
-  background: #15171c;
+  background: #15171c7d;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -44,21 +36,17 @@ const Sidebar = () => {
    
     return (
       <>
-          <Nav>
-            <NavIcon to="#">
-                <img src={shoppingBasket} alt='shop' onClick={showSidebar}/>
-            </NavIcon>
-          </Nav>
-          <SidebarNav $sidebar={sidebar}>
+        <img src={shoppingBasket} alt='cart-icon' onClick={showSidebar}/>
+        <SidebarNav $sidebar={sidebar}>
             <SidebarWrap>
               <NavIcon to="#">
-                <img src={shoppingBasket} alt='shop' onClick={showSidebar}/>
+                <img src={shoppingBasket} alt='cart-icon' onClick={showSidebar}/>
               </NavIcon>
               {/* {SidebarData.map((item, index) => {
                 return <SubMenu item={item} key={index} />;
               })} */}
             </SidebarWrap>
-          </SidebarNav>
+        </SidebarNav>
       </>
     );
   };
