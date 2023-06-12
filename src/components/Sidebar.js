@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext, createContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import shoppingBasket from "../resources/icons/shopping-basket.svg";
+import { BoughtProductsContext } from '../App';
  
 const NavIcon = styled(Link)`
   margin-left: 2rem;
@@ -30,6 +31,8 @@ const SidebarWrap = styled.div`
 `;
 
 const Sidebar = () => {
+    const boughtProducts = useContext(BoughtProductsContext);
+    console.log(boughtProducts)
     const [sidebar, setSidebar] = useState(false);
    
     const showSidebar = () => setSidebar(!sidebar);
