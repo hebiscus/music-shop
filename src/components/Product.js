@@ -3,7 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Product({ products }) {
+function Product(props) {
+    const {products, addToCart} = props;
     const { productTitle } = useParams();
     const productData = products.filter(product => product.title === productTitle)[0];
     console.log(productData)
@@ -23,7 +24,7 @@ function Product({ products }) {
                 <p>{productData.description}</p>
                 <div className="buy-container">
                     <p>Price: {productData.price}</p>
-                    <button className="buy-btn">
+                    <button className="buy-btn" onClick={() => addToCart(productData)}>
                         Buy now
                         <FontAwesomeIcon icon={faCartShopping} style={{color: "#ffffff",}} />
                     </button>

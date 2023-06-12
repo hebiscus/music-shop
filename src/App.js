@@ -10,12 +10,10 @@ import { useState, createContext } from 'react';
 export const BoughtProductsContext = createContext(null);
 
 function App() {
-
   const [boughtProducts, setBoughtProducts] = useState([]);
 
-
   function addToCart(product) {
-    setBoughtProducts([boughtProducts, product]);
+    setBoughtProducts([...boughtProducts, product]);
   }
 
   return (
@@ -27,8 +25,8 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path='/cds' element={<Products products={cdData} />}/>
           <Route path='/vinyls' element={<Products products={vinylData} />}/>
-          <Route path='/cds/:productTitle' element={<Product products={cdData} />}/>
-          <Route path='/vinyls/:productTitle' element={<Product products={vinylData} />}/>
+          <Route path='/cds/:productTitle' element={<Product products={cdData} addToCart={addToCart} />}/>
+          <Route path='/vinyls/:productTitle' element={<Product products={vinylData} addToCart={addToCart} />}/>
       </Routes>
     </>
   );
