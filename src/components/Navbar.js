@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import githubLogo from "../resources/logos/github-mark-white.svg";
 import shoppingBasket from "../resources/icons/shopping-basket.svg";
+import Sidebar from "./Sidebar";
 
 function Navbar() {
 
@@ -22,9 +23,10 @@ function Navbar() {
                 </li>
             </ul>
             <div className="navbar-cart">
-                <button>
+                {/* <button>
                     <img src={shoppingBasket} alt="shopping-basket"></img>
-                </button>
+                </button> */}
+                <Sidebar />
                 <div></div>
             </div>
         </nav>
