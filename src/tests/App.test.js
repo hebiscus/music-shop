@@ -43,12 +43,6 @@ describe('special offer rendering', () => {
     await act(async() => {
        await user.click(screen.getByRole('button', { name: "previous slide" }));
     })
-
-    // act(() => {
-    //   user.click(screen.getByRole('button', { name: "previous slide" }));
-    // })
-
-    // await user.click(screen.getByRole('button', { name: "previous slide" }));
     
     const testImage = screen.getByRole('img', { name: "jah.png"});
     const jahHeadline = screen.getByRole('heading', { name: "Jah Wurzel - Wuthering Heights" });
@@ -59,7 +53,6 @@ describe('special offer rendering', () => {
   test('click on next slide displays klark picture and associated data', async () => {
     const user = userEvent.setup();
     render(<SpecialOffers pictures={testPictures}/>);
-
 
     await act(async() => {
       await user.click(screen.getByRole('button', { name: "next slide" }));
