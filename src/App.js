@@ -19,11 +19,16 @@ function App() {
     else {
       return;
     }
+  };
+
+  function deleteFromCart(product) {
+    const newProducts = boughtProducts.filter(boughtProduct => boughtProduct !== product);
+    setBoughtProducts(newProducts);
   }
 
   return (
     <>
-      <BoughtProductsContext.Provider value={boughtProducts}>
+      <BoughtProductsContext.Provider value={{boughtProducts, deleteFromCart}}>
         <Navbar />
       </BoughtProductsContext.Provider>
       <Routes>

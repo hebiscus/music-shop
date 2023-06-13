@@ -31,7 +31,7 @@ const SidebarWrap = styled.div`
 `;
 
 const Sidebar = () => {
-    const boughtProducts = useContext(BoughtProductsContext);
+    const {boughtProducts, deleteFromCart} = useContext(BoughtProductsContext);
     console.log(boughtProducts);
     const sumTotal = boughtProducts.reduce(function (accumulator, obj) {return accumulator + Number(obj.price)}, 0);
     console.log(sumTotal)
@@ -50,7 +50,8 @@ const Sidebar = () => {
               {boughtProducts.map((product, index) => {
                 return <div key={index}>
                   <h5>{product.title}</h5>
-                  <h5>{product.price}</h5>  
+                  <h5>{product.price}</h5>
+                  <button onClick={() => deleteFromCart(product)}>Delete</button>  
                 </div>
               })}
               <div className='checkout-container'>
