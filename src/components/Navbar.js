@@ -23,9 +23,6 @@ function Navbar() {
                 </li>
             </ul>
             <div className="navbar-cart">
-                {/* <button>
-                    <img src={shoppingBasket} alt="shopping-basket"></img>
-                </button> */}
                 <Sidebar />
             </div>
         </nav>
