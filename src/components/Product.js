@@ -23,7 +23,7 @@ function Product(props) {
                 <h3>{productTitle}</h3>
                 <p>{productData.description}</p>
                 <div className="buy-container">
-                    <p>Price: {productData.price}</p>
+                    <p>Price: {productData.price}$</p>
                     <button className="buy-btn" onClick={() => addToCart(productData)}>
                         Buy now
                         <FontAwesomeIcon icon={faCartShopping} style={{color: "#ffffff",}} />

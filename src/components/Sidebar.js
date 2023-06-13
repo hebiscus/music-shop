@@ -32,7 +32,9 @@ const SidebarWrap = styled.div`
 
 const Sidebar = () => {
     const boughtProducts = useContext(BoughtProductsContext);
-    console.log(boughtProducts)
+    console.log(boughtProducts);
+    const sumTotal = boughtProducts.reduce(function (accumulator, obj) {return accumulator + Number(obj.price)}, 0);
+    console.log(sumTotal)
     const [sidebar, setSidebar] = useState(false);
    
     const showSidebar = () => setSidebar(!sidebar);
@@ -45,9 +47,16 @@ const Sidebar = () => {
               <NavIcon to="#">
                 <img src={shoppingBasket} alt='cart-icon' onClick={showSidebar}/>
               </NavIcon>
-              {/* {SidebarData.map((item, index) => {
-                return <SubMenu item={item} key={index} />;
-              })} */}
+              {boughtProducts.map((product, index) => {
+                return <div key={index}>
+                  <h5>{product.title}</h5>
+                  <h5>{product.price}</h5>  
+                </div>
+              })}
+              <div className='checkout-container'>
+                <h4>Grand total: {sumTotal}$</h4>
+                <button>Checkout</button>
+              </div>
             </SidebarWrap>
         </SidebarNav>
       </>
