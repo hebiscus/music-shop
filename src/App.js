@@ -32,9 +32,9 @@ function App() {
         <Navbar />
       </BoughtProductsContext.Provider>
       <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path='/cds' element={<Products products={cdData} />}/>
-          <Route path='/vinyls' element={<Products products={vinylData} />}/>
+          <Route exact path="/" element={<Home />}/>
+          <Route path='/cds' element={<Products products={cdData} key={'cds'}/>}/>
+          <Route path='/vinyls' element={<Products products={vinylData} key={'vinyls'}/>}/>
           <Route path='/cds/:productTitle' element={<Product products={cdData} addToCart={addToCart} />}/>
           <Route path='/vinyls/:productTitle' element={<Product products={vinylData} addToCart={addToCart} />}/>
       </Routes>
