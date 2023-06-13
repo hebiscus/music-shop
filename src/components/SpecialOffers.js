@@ -14,7 +14,7 @@ function SpecialOffers({ pictures }) {
       };
     
     const prevSlide = () => {
-        setCurrentSlide(currentSlide  === 0 ? numberOfPictures - 1 : currentSlide  - 1);
+        setCurrentSlide(currentSlide === 0 ? numberOfPictures - 1 : currentSlide  - 1);
     };
     
     if (!Array.isArray(pictures) || numberOfPictures <= 0) {
