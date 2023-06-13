@@ -7,6 +7,7 @@ import App from '../App';
 import SpecialOffers from '../components/SpecialOffers';
 import Home from '../components/Home';
 import Products from '../components/Products';
+import { BoughtProductsContext } from '../App';
 
 
 test('renders navbar no matter the subpage', () => {
@@ -84,25 +85,25 @@ describe("rendering Products component", () => {
     price: "$30.00"}
   ];
 
-  // test("renders Genres section properly", () => {
-  //   render (<Products products={testProducts} />)
+  test("renders Genres section properly", () => {
+    render (<Products products={testProducts}/>, {wrapper: MemoryRouter})
 
-  //   const genresHeadline = screen.getByRole("heading", {name: "Genres"});
-  //   const genresButtons = screen.getAllByRole("button")
-  //   expect(genresHeadline).toBeInTheDocument();
-  //   expect(genresButtons).toHaveLength(6);
-  // });
+    const genresHeadline = screen.getByRole("heading", {name: "Genres"});
+    const genresButtons = screen.getAllByRole("button")
+    expect(genresHeadline).toBeInTheDocument();
+    expect(genresButtons).toHaveLength(7);
+  });
 
-  // test("renders all products passed in", () => {
-  //   render (<Products products={testProducts} />)
+  test("renders all products passed in", () => {
+    render (<Products products={testProducts}/>, {wrapper: MemoryRouter})
 
-  //   const productTitle = screen.getByAltText("Colin Stetson - When we were that wept for the sea");
-  //   const productImage = screen.getByRole("img", {name: "Colin Stetson - When we were that wept for the sea"});
+    const productTitle = screen.getByAltText("Colin Stetson - When we were that wept for the sea");
+    const productImage = screen.getByRole("img", {name: "Colin Stetson - When we were that wept for the sea"});
 
-  //   expect(productTitle).toBeInTheDocument();
-  //   expect(productImage).toBeInTheDocument();
-  //   expect(productImage).toHaveAccessibleName("Colin Stetson - When we were that wept for the sea")
-  // })
+    expect(productTitle).toBeInTheDocument();
+    expect(productImage).toBeInTheDocument();
+    expect(productImage).toHaveAccessibleName("Colin Stetson - When we were that wept for the sea")
+  })
 
 
 })
