@@ -71,15 +71,15 @@ const vinylData = [
      description: "ababa cnsdkc yes!",
      price: "300.00"},
 
-     {title: "Snips - What's Your Number",
-     genre: "math rock",
-     coverSmall: "/vinyl-covers/Snips.png",
-     description: "ababa cnsdkc yes!",
-     price: "300.00"},
-
      {title: "Jah Wurzel - Wuthering Heights",
      genre: "new wave",
      coverSmall: "/vinyl-covers/jah wurzel.png",
+     description: "ababa cnsdkc yes!",
+     price: "300.00"},
+
+     {title: "Snips - What's Your Number",
+     genre: "math rock",
+     coverSmall: "/vinyl-covers/Snips.png",
      description: "ababa cnsdkc yes!",
      price: "300.00"},
 
