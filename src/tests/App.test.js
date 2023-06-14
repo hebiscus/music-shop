@@ -1,14 +1,13 @@
 import '@testing-library/jest-dom';
 import { render, screen, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import {BrowserRouter, MemoryRouter} from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import React from 'react'
 import App from '../App';
 import SpecialOffers from '../components/SpecialOffers';
 import Home from '../components/Home';
 import Products from '../components/Products';
-import { BoughtProductsContext } from '../App';
-
+import { vinylData } from '../components/productsData';
 
 test('renders navbar no matter the subpage', () => {
   render(<App />, {wrapper: MemoryRouter});
@@ -21,31 +20,26 @@ test('renders navbar no matter the subpage', () => {
   expect(vinylLink).toBeInTheDocument();
 });
 
-
 describe('special offer rendering', () => {
-  const testPictures = [
-    "xtc.png", "klark.png", "jah.png"
-  ]
 
   test('first render shows XTC picture and associated data', () => {
-    render(<SpecialOffers pictures={testPictures}/>);
+    render(<SpecialOffers offers={vinylData}/>, {wrapper: MemoryRouter});
   
     const testImage = screen.getByRole('img');
     const xtcHeadline = screen.getByRole('heading', { name: "XTC - Life Begins At The Hop" });
-    expect(testImage).toHaveAttribute('src', 'xtc.png');
-    expect(testImage.alt).toContain("xtc");
+    expect(testImage.alt).toContain("XTC");
     expect(xtcHeadline).toBeInTheDocument();
   });
 
   test('click on previous slide displays jah picture and associated data', async () => {
     const user = userEvent.setup();
-    render(<SpecialOffers pictures={testPictures}/>);
+    render(<SpecialOffers offers={vinylData}/>, {wrapper: MemoryRouter});
 
     await act(async() => {
        await user.click(screen.getByRole('button', { name: "previous slide" }));
     })
     
-    const testImage = screen.getByRole('img', { name: "jah.png"});
+    const testImage = screen.getByRole('img', { name: "Jah Wurzel - Wuthering Heights"});
     const jahHeadline = screen.getByRole('heading', { name: "Jah Wurzel - Wuthering Heights" });
     expect(testImage).toBeInTheDocument();
     expect(jahHeadline).toBeInTheDocument();
@@ -53,13 +47,13 @@ describe('special offer rendering', () => {
 
   test('click on next slide displays klark picture and associated data', async () => {
     const user = userEvent.setup();
-    render(<SpecialOffers pictures={testPictures}/>);
+    render(<SpecialOffers offers={vinylData}/>, {wrapper: MemoryRouter});
 
     await act(async() => {
       await user.click(screen.getByRole('button', { name: "next slide" }));
     })
     
-    const testImage = screen.getByRole('img', { name: "klark.png"});
+    const testImage = screen.getByRole('img', { name: "Klark Kent - Don't Care"});
     const klarkHeadline = screen.getByRole('heading', { name: "Klark Kent - Don't Care" });
     expect(testImage).toBeInTheDocument();
     expect(klarkHeadline).toBeInTheDocument();
@@ -67,7 +61,7 @@ describe('special offer rendering', () => {
 });
 
 test('renders additional info on Home correctly', () => {
-  render(<Home />);
+  render(<Home />, {wrapper: MemoryRouter});
 
   const mainParagraph = screen.getByText(/For all/i);
   const githubLink = screen.getByText(/Github/i);

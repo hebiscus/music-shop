@@ -37,7 +37,7 @@ function SpecialOffers({ offers }) {
                     >
                       {index === currentSlide && (
                         <Link to={`/vinyls/${offer.title}`} >
-                        <img src={offer.coverSmall} alt={offer[index]} className='image' />
+                        <img src={offer.coverSmall} alt={offer.title} className='image' />
                         </Link>
                       )}
                     </div>
