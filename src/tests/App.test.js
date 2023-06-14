@@ -8,6 +8,10 @@ import SpecialOffers from '../components/SpecialOffers';
 import Home from '../components/Home';
 import Products from '../components/Products';
 import { vinylData } from '../components/productsData';
+import Product from '../components/Product';
+import Navbar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
+import { BoughtProductsContext } from '../App';
 
 test('renders navbar no matter the subpage', () => {
   render(<App />, {wrapper: MemoryRouter});
@@ -98,6 +102,45 @@ describe("rendering Products component", () => {
     expect(productImage).toBeInTheDocument();
     expect(productImage).toHaveAccessibleName("Colin Stetson - When we were that wept for the sea")
   })
+})
 
+describe("App routing", () => {
+  test("should display proper subpage on click", async () => {
+    const user = userEvent.setup()
+    render (<App />, {wrapper: MemoryRouter})
 
+    expect(screen.getByText(/XTC - Life Begins At The Hop/i)).toBeInTheDocument();
+
+    await act(async () => {
+      await user.click(screen.getByText(/CDs/i));
+    })
+    
+    expect(screen.getByText(/Colin Stetson - When we were that wept for the sea/i)).toBeInTheDocument();
+
+    await act(async () => {
+      await user.click(screen.getByText(/Vinyls/i));
+    })
+    
+    expect(screen.getByText(/XTC - Life Begins At The Hop/i)).toBeInTheDocument();
+    expect(screen.getByText(/Klark Kent - Don't Care/i)).toBeInTheDocument();
+  })
+  
+  test.skip("should redirect to Home when the page is not found", async () => {
+    const user = userEvent.setup();
+    render(<App />, {wrapper: MemoryRouter})
+  })
+})
+
+describe("rendering bought products in sidebar", () => {
+  const boughtProducts = vinylData;
+  const deleteFromCartMock = jest.fn()
+  test("should render products when passed it", () => {
+    render(<BoughtProductsContext.Provider value={{boughtProducts, deleteFromCartMock}}>
+      <Sidebar />
+      </BoughtProductsContext.Provider>, {wrapper: MemoryRouter})
+
+    expect(screen.getByText(/XTC - Life Begins At The Hop/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", {name: "Grand total: 1800$"})).toBeInTheDocument();
+      // lacks ecpectations for number of products
+  })
 })
