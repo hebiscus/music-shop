@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 
-function SpecialOffers({ pictures }) {
+function SpecialOffers({ offers }) {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const numberOfPictures = pictures.length;
+    const offersSlideShow = offers.slice(0, 3);
+    const numberOfPictures = offersSlideShow.length;
 
     const nextSlide = () => {
         setCurrentSlide(currentSlide === numberOfPictures - 1 ? 0 : currentSlide  + 1);
@@ -17,7 +19,7 @@ function SpecialOffers({ pictures }) {
         setCurrentSlide(currentSlide === 0 ? numberOfPictures - 1 : currentSlide  - 1);
     };
     
-    if (!Array.isArray(pictures) || numberOfPictures <= 0) {
+    if (!Array.isArray(offersSlideShow) || numberOfPictures <= 0) {
         return null;
     }
     
@@ -28,13 +30,15 @@ function SpecialOffers({ pictures }) {
                   <button className="slider-arrows" aria-label="previous slide" onClick={prevSlide}>
                     <FontAwesomeIcon icon={faAngleLeft} style={{color: "#ffffff",}}/>
                   </button>
-                  {pictures.map((currentImage, index) => {
+                  {offersSlideShow.map((offer, index) => {
                       return <div
                       className={index === currentSlide ? 'slide active' : 'slide'}
                       key={index}
                     >
                       {index === currentSlide && (
-                        <img src={currentImage} alt={pictures[index]} className='image' />
+                        <Link to={`/vinyls/${offer.title}`} >
+                        <img src={offer.coverSmall} alt={offer[index]} className='image' />
+                        </Link>
                       )}
                     </div>
                   })}
