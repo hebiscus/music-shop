@@ -1,0 +1,40 @@
+@use "App";
+
+$icons-height: clamp(2.188rem, 1.282vw + 1.899rem, 3.438rem);
+$icons-width: clamp(2.188rem, 1.282vw + 1.899rem, 3.438rem);
+
+.navbar, .navbar-github, .navbar-links, .navbar-cart {
+    display: flex;
+}
+
+.navbar {
+    color: App.$font-color;
+
+    .navbar-github > img {
+        width: $icons-width;
+        height: $icons-height;
+    };
+
+    .navbar-links {
+        gap: 10px;
+        text-decoration: none;
+        a {
+            color: App.$font-color;
+        }
+    }
+
+    .navbar-links > li > *.active {
+        color:red;
+        text-decoration: underline;
+    }
+
+    .navbar-cart > button {
+        background: transparent;
+        height: $icons-height;
+        
+        & * {
+            width: $icons-width;
+            height: $icons-height;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import githubLogo from "../resources/logos/github-mark-white.svg";
-import shoppingBasket from "../resources/icons/shopping-basket.svg";
 import Sidebar from "./Sidebar";
+import'../styles/navbar-style.scss';
 
 function Navbar() {
 
