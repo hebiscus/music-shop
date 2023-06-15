@@ -1,15 +1,16 @@
 @use "Products";
-@use "App";
+@use "variables";
+@use "mixins-functions";
 
 #background-color {
-    @include Products.backgroundSettings();
-};
+    @include mixins-functions.backgroundSettings;
+}
 
 .product-render {
-    color: App.$font-color;
+    color: variables.$font-color;
 
     & button {
         color: inherit;
-        @include App.clearButton();
+        @include mixins-functions.clearButton();
     }
 }

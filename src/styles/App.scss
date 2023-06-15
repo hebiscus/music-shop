@@ -1,41 +1,30 @@
-// @use 'navbar-props';
-$font-color: white;
-
-@mixin clearButton() {
-    background: transparent;
-    text-decoration: none;
-    border: none;
-    line-height: normal;
-}
+@use "variables";
+@use "mixins-functions";
 
 .special-offers {
-    color: $font-color;
+    color: variables.$font-color;
 
     .slider-arrows {
-        @include clearButton;
+        @include mixins-functions.clearButton;
     }
 }
 
 .additional-info {
-    color: $font-color;
+    color: variables.$font-color;
 
     & a {
-        text-decoration: none;
-        color: $font-color;
+        @include mixins-functions.clearLinks;
     }
 }
 
 #background-video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
     position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     z-index: -1;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
+
 
 
   
