@@ -1,4 +1,4 @@
-import { useState, useContext, createContext } from 'react';
+import { useState, useContext} from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
