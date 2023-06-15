@@ -1,7 +1,7 @@
-import "../styles/Product.scss";
 import { useParams, useNavigate } from "react-router-dom";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../styles/Product.scss";
 
 function Product(props) {
     const {products, addToCart} = props;
