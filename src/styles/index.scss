@@ -2,13 +2,10 @@
   font-family: 'Space Grotesk', sans-serif;
 }
 
-html {
-  min-height: 100%;
-}
 
 body {
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 *, *:before, *:after{
