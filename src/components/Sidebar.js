@@ -33,9 +33,7 @@ const SidebarWrap = styled.div`
 
 const Sidebar = () => {
     const {boughtProducts, deleteFromCart} = useContext(BoughtProductsContext);
-    console.log(boughtProducts);
     const sumTotal = boughtProducts.reduce(function (accumulator, obj) {return accumulator + Number(obj.price)}, 0);
-    console.log(sumTotal)
     const [sidebar, setSidebar] = useState(false);
    
     const showSidebar = () => setSidebar(!sidebar);
