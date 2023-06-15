@@ -1,7 +1,8 @@
 import { useState, useContext, createContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import shoppingBasket from "../resources/icons/shopping-basket.svg";
+import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BoughtProductsContext } from '../App';
  
 const NavIcon = styled(Link)`
@@ -40,15 +41,16 @@ const Sidebar = () => {
     const showSidebar = () => setSidebar(!sidebar);
    
     return (
-      <>
-        <img src={shoppingBasket} alt='cart-icon' onClick={showSidebar}/>
+      <>  <button className='toogle-cart-btn'>
+          <FontAwesomeIcon icon={faBasketShopping} style={{color: "#ffffff",}} onClick={showSidebar} />
+          </button>
         <SidebarNav $sidebar={sidebar}>
             <SidebarWrap>
               <NavIcon to="#">
-                <img src={shoppingBasket} alt='cart-icon' onClick={showSidebar}/>
+                <FontAwesomeIcon icon={faBasketShopping} style={{color: "#ffffff",}} onClick={showSidebar} />
               </NavIcon>
               {boughtProducts.map((product, index) => {
-                return <div key={index}>
+                return <div key={index} className='boughtProduct-container'>
                   <h5>{product.title}</h5>
                   <h5>{product.price}</h5>
                   <button onClick={() => deleteFromCart(product)}>Delete</button>  
