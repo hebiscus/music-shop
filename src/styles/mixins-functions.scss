@@ -1,0 +1,23 @@
+@mixin clearButton() {
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    line-height: normal;
+}
+
+@mixin clearLinks() {
+    text-decoration: none;
+    color: inherit;
+}
+
+@mixin backgroundSettings() {
+    background-color: #242930;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
