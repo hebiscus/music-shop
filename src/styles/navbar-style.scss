@@ -1,4 +1,4 @@
-@use "App";
+@use "variables";
 
 $icons-height: clamp(2.188rem, 1.282vw + 1.899rem, 3.438rem);
 $icons-width: clamp(2.188rem, 1.282vw + 1.899rem, 3.438rem);
@@ -8,7 +8,7 @@ $icons-width: clamp(2.188rem, 1.282vw + 1.899rem, 3.438rem);
 }
 
 .navbar {
-    color: App.$font-color;
+    color: variables.$font-color;
 
     .navbar-github > img {
         width: $icons-width;
@@ -17,14 +17,17 @@ $icons-width: clamp(2.188rem, 1.282vw + 1.899rem, 3.438rem);
 
     .navbar-links {
         gap: 10px;
-        text-decoration: none;
+        
         a {
-            color: App.$font-color;
+            color: variables.$font-color;
+            font-size: clamp(2.1875rem, 1.9097rem + 1.2346vw, 3.4375rem);
+            text-decoration: none;
+            text-decoration-thickness: 3px;
         }
     }
 
     .navbar-links > li > *.active {
-        color:red;
+        color:#bfbfbf;
         text-decoration: underline;
     }
 
