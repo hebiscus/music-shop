@@ -8,6 +8,7 @@ $icons-width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
 }
 
 .navbar {
+    padding-top: 5px;
     color: variables.$font-color;
     align-items: center;
 
@@ -34,6 +35,7 @@ $icons-width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
         }
         
         & a {
+            font-weight: bold;
             color: variables.$font-color;
             font-size: clamp(1.875rem, 1.5139rem + 1.6049vw, 3.5rem);
             text-decoration: none;
@@ -69,6 +71,6 @@ $icons-width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
 
 @media (min-width: 700px) {
     .toogle-cart-btn {
-        margin-left: clamp(5.9375rem, 0.8681rem + 0.3086vw, 1.25rem);
+        margin-left: clamp(4.9375rem, 0.8681rem + 0.3086vw, 1.25rem);
     }
 }
