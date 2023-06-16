@@ -12,9 +12,11 @@ $icons-width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
     align-items: center;
 
     .navbar-github {
+        margin-left: 10px;
         align-items: center;
     }
     .navbar-github > h2{
+        padding-left: 5px;
         font-size: clamp(0.9375rem, 0.8681rem + 0.3086vw, 1.25rem);
     }
     .navbar-github > img {
@@ -23,14 +25,17 @@ $icons-width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
     };
 
     .navbar-links {
-        gap: 5%;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: space-around;
+        flex: 1;
+        justify-content: center;
+
+        & li {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
         
-        a {
+        & a {
             color: variables.$font-color;
-            font-size: clamp(2.0625rem, 1.2153rem + 3.7654vw, 5.875rem);
+            font-size: clamp(1.875rem, 1.5139rem + 1.6049vw, 3.5rem);
             text-decoration: none;
             text-decoration-thickness: 3px;
         }
@@ -42,8 +47,10 @@ $icons-width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
     }
 
     .toogle-cart-btn {
+        margin-right: 10px;
         background: transparent;
         height: $icons-height;
+        width: $icons-width;
         
         & * {
             width: $icons-width;
@@ -55,5 +62,13 @@ $icons-width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
 @media (max-width: 700px) {
     .navbar-github > h2 {
         display: none;
+    }
+
+    
+}
+
+@media (min-width: 700px) {
+    .toogle-cart-btn {
+        margin-left: clamp(5.9375rem, 0.8681rem + 0.3086vw, 1.25rem);
     }
 }
