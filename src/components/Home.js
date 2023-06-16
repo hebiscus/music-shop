@@ -16,14 +16,16 @@
                     Isn't quite what you're looking for?
                     Check us out on other platforms:
                 </p>
-                <a href="https://github.com/hebiscus">
-                    <img src={githubLogo} alt="Github Logo"></img>
-                    Github
-                </a>
-                <a href="https://www.linkedin.com/in/katarzyna-gasiorek/">
-                    <img src={linkedinLogo} alt="Linkedin Logo"></img>
-                    Linkedin
-                </a>
+                <div>
+                    <a href="https://github.com/hebiscus">
+                        <img src={githubLogo} alt="Github Logo"></img>
+                        Github
+                    </a>
+                    <a href="https://www.linkedin.com/in/katarzyna-gasiorek/">
+                        <img src={linkedinLogo} alt="Linkedin Logo"></img>
+                        Linkedin
+                    </a>
+                </div>
             </div>
         </>
     )

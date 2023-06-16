@@ -1,10 +1,63 @@
+@use 'variables';
+
 .special-offers {
     display: flex;
     flex-direction: column;
+
+    .image-slider {
+        display: flex;
+        justify-content: center;
+    }
+
+    .offer-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        text-align: center;
+
+        & h4 {
+            font-size: clamp(1.5625rem, 1.4236rem + 0.6173vw, 2.1875rem);
+            text-align: center;
+        }
+
+        & p {
+            font-size: clamp(1.25rem, 0.9722rem + 1.2346vw, 2.5rem);
+        }
+
+        & h1 {
+            font-size: clamp(2.125rem, 1.8472rem + 1.2346vw, 3.375rem);
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+
+}
+
+.additional-info {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    & p {
+        font-size: clamp(0.9375rem, 0.6597rem + 1.2346vw, 2.1875rem);
+        text-align: center;
+    } 
+    
+    & a > img {
+        height: clamp(1.563rem, 1.227vw + 1.286rem, 2.813rem);
+        width: clamp(1.563rem, 1.227vw + 1.286rem, 2.813rem);
+    }
+
+    & div {
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+    }
 }
 
 
 
-.image {
-    width: 50px;
-}
