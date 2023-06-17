@@ -3,6 +3,7 @@
 .special-offers {
     display: flex;
     flex-direction: column;
+    backdrop-filter: blur(6px);
 
     .image-slider {
         display: flex;
@@ -39,6 +40,7 @@
             font-size: clamp(2.125rem, 1.8472rem + 1.2346vw, 3.375rem);
             text-align: center;
             font-weight: bold;
+            text-shadow: 7px 4px 4px rgb(0, 0, 0, 45%);
         }
     }
 
