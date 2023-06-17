@@ -101,5 +101,45 @@
     width: 100vw;
 }
 
+@media (min-width: 937px) {
+    .special-offers {
+        flex-direction: row;
+        align-items: center;
+        // padding-left: 8rem;
+        // padding-right: 8rem;
+        padding-top: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
 
 
+        .offer-info {
+            gap: 2.2rem;
+            // padding-left: 7.5rem;
+            // padding-right: 7.5rem;
+            text-align: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (min-width: 1354px) {
+    .special-offers {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media (min-width: 1477px) {
+    .special-offers {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+}
+
+
+@media (min-width: 1764px) {
+    .special-offers {
+        padding-left: 12rem;
+        padding-right: 12rem;
+    }
+}
