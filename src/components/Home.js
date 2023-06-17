@@ -12,10 +12,11 @@
             </video>
             <SpecialOffers offers={vinylData} />
             <div className="additional-info">
-                <p>For all the music lovers since 1974
-                    Isn't quite what you're looking for?
-                    Check us out on other platforms:
-                </p>
+                <div>
+                    <p>For all the music lovers since 1974</p>
+                    <p>Isn't quite what you're looking for?</p>
+                    <p>Check us out on other platforms:</p>
+                </div>
                 <div>
                     <a href="https://github.com/hebiscus">
                         <img src={githubLogo} alt="Github Logo"></img>

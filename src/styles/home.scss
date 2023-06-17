@@ -37,13 +37,13 @@
 
 .additional-info {
     padding-top: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     display: flex;
     flex-direction: column;
 
     & p {
-        font-size: clamp(0.9375rem, 0.6597rem + 1.2346vw, 2.1875rem);
+        font-size: clamp(1rem, 0.7083rem + 1.2963vw, 2.3125rem);
         text-align: center;
     } 
     
@@ -52,10 +52,24 @@
         width: clamp(1.563rem, 1.227vw + 1.286rem, 2.813rem);
     }
 
-    & div {
+    & div:first-of-type {
+        background-color: #9E9E9EA1;
+        border-radius: 5px;
+        box-shadow: 4px 1px 5px 0px rgba(0, 0, 0, 1);
+        line-height: 1.5;
+    }
+
+    & div:last-of-type {
+        margin-top: 0.5rem;
         display: flex;
         justify-content: center;
         gap: 5%;
+
+        & a {
+            background-color: #9E9E9EA1;
+            border-radius: 5px;
+            box-shadow: 4px 1px 5px 0px rgba(0, 0, 0, 1);
+        }
     }
 }
 
