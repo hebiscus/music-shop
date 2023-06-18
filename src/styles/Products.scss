@@ -3,6 +3,32 @@
 
 .products-render {
     color: variables.$font-color;
+
+    .genres-container {
+        display: none;
+    }
+
+    .products-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        gap: 1.3rem;
+        text-align: center;
+
+        .product-div > a {
+            justify-items: center;
+
+            & p {
+                font-size: clamp(1rem, 0.875rem + 0.5556vw, 1.5625rem);
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+                font-weight: 500;
+            }
+        }
+    }
+
 }
 
 #background-color {

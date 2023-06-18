@@ -31,10 +31,10 @@ function Products({ products }) {
             </div>
             <div className="products-container">
                 {currentProducts.map((product, index) => {
-                    return <div key={index}>
+                    return <div key={index} className="product-div">
                         <Link to={product.title}>
                             <img src={product.coverSmall} alt={product.title}></img>
-                            <h5>{product.title}</h5>
+                            <p>{product.title}</p>
                         </Link>
                     </div>
                 })}
