@@ -1,11 +1,20 @@
 @use "variables";
 @use "mixins-functions";
 
+#background-color {
+    @include mixins-functions.backgroundSettings;
+}
+
 .products-render {
     color: variables.$font-color;
 
     .genres-container {
         display: none;
+
+        & button {
+            color: inherit;
+            @include mixins-functions.clearButton();
+        }
     }
 
     .products-container {
@@ -17,13 +26,18 @@
         gap: 1.3rem;
         text-align: center;
 
+        & a {
+            @include mixins-functions.clearLinks;
+         }
+
         .product-div > a {
+            display: grid;
             justify-items: center;
+            gap: 0.3rem;
 
             & p {
+                max-width: 250px;
                 font-size: clamp(1rem, 0.875rem + 0.5556vw, 1.5625rem);
-                padding-left: 2.5rem;
-                padding-right: 2.5rem;
                 font-weight: 500;
             }
         }
@@ -31,19 +45,47 @@
 
 }
 
-#background-color {
-    @include mixins-functions.backgroundSettings;
-}
+@media (min-width: 630px) {
+    .products-render {
+        display: flex;
+        padding-left: 10px;
 
-.genres-container {
-    & button {
-        color: inherit;
-        @include mixins-functions.clearButton();
+        .genres-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 2.2rem;
+
+            & h2 {
+                font-size: clamp(1.9375rem, 1.6597rem + 1.2346vw, 3.1875rem);
+                margin-bottom: 0.5rem;
+            }
+
+            & button {
+                font-size: clamp(1.5625rem, 1.4236rem + 0.6173vw, 2.1875rem);
+                margin-top: 0.6rem;
+                margin-bottom: 0.6rem;
+            }
+        }
+
+        .products-container {
+            padding-left: 0;
+            padding-right: 0;
+            flex: 1;
+        }
     }
 }
 
-.products-container {
-     & a {
-        @include mixins-functions.clearLinks;
-     }
+
+@media (min-width: 845px) {
+
+    .products-render {
+
+        .products-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    
 }
+
