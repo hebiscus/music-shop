@@ -4,6 +4,7 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import "../styles/home.scss";
 
 
 function SpecialOffers({ offers }) {
@@ -26,29 +27,30 @@ function SpecialOffers({ offers }) {
     return (
         <div className="special-offers">
           <section className="image-slider">
-              <div>
-                  <button className="slider-arrows" aria-label="previous slide" onClick={prevSlide}>
-                    <FontAwesomeIcon icon={faAngleLeft} style={{color: "#ffffff",}}/>
-                  </button>
-                  {offersSlideShow.map((offer, index) => {
-                      return <div
-                      className={index === currentSlide ? 'slide active' : 'slide'}
-                      key={index}
-                    >
-                      {index === currentSlide && (
-                        <Link to={`/vinyls/${offer.title}`} >
-                        <img src={offer.coverSmall} alt={offer.title} className='image' />
-                        </Link>
-                      )}
-                    </div>
-                  })}
-                  <button className="slider-arrows" aria-label="next slide" onClick={nextSlide}>
-                    <FontAwesomeIcon icon={faAngleRight} style={{color: "#ffffff",}}/>
-                  </button>
+            <button className="slider-arrows" aria-label="previous slide" onClick={prevSlide}>
+              <FontAwesomeIcon icon={faAngleLeft} style={{color: "#ffffff",}}/>
+            </button>
+            {offersSlideShow.map((offer, index) => {
+                return <div
+                className={index === currentSlide ? 'slide active' : 'slide'}
+                key={index}
+              >
+                {index === currentSlide && (
+                  <Link to={`/vinyls/${offer.title}`} >
+                    <img 
+                    src={offer.coverSmall} 
+                    srcSet={`${offer.coverSmall} 320w, ${offer.coverMediumHome} 480w`}
+                    sizes={`(max-width: 640px) 320px, (min-width: 640px) 480px`}
+                    alt={offer.title} 
+                    className='image' 
+                    />
+                  </Link>
+                )}
               </div>
-              <div className="slider-dots">
-
-              </div>
+            })}
+            <button className="slider-arrows" aria-label="next slide" onClick={nextSlide}>
+              <FontAwesomeIcon icon={faAngleRight} style={{color: "#ffffff",}}/>
+            </button>
           </section>
           <div className="offer-info">
             <h1>{currentSlide === 0 ? "XTC - Life Begins At The Hop"
