@@ -7,6 +7,7 @@ function Product(props) {
     const {products, addToCart} = props;
     const { productTitle } = useParams();
     const productData = products.filter(product => product.title === productTitle)[0];
+    console.log(products)
     console.log(productData)
     const navigate = useNavigate();
 
@@ -17,7 +18,8 @@ function Product(props) {
             <div className="product-container">
                 <img 
                     src={productData.coverSmall} 
-                    alt={productData.title}>
+                    alt={productData.title}
+                    className={productData.id <= 8 ? "cdCover" : "vinylCover"}>
                 </img>
                 <h3>{productTitle}</h3>
                 <p>{productData.description}</p>
