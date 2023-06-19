@@ -33,7 +33,11 @@ function Products({ products }) {
                 {currentProducts.map((product, index) => {
                     return <div key={index} className="product-div">
                         <Link to={product.title}>
-                            <img src={product.coverSmall} alt={product.title}></img>
+                            <img src={product.coverSmall} alt={product.title}
+                                srcSet={`${product.coverSmall} 263w, ${product.coverMedium} 350w`}
+                                sizes={`(max-width: 972px) 263px, (min-width: 972px) 350px`}
+                                className={`Cover${product.id}`}>
+                            </img>
                             <p>{product.title}</p>
                         </Link>
                     </div>

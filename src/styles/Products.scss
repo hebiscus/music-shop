@@ -40,21 +40,30 @@
                 font-size: clamp(1rem, 0.875rem + 0.5556vw, 1.5625rem);
                 font-weight: 500;
             }
+
+            :nth-child(6) > img{
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+
+        .Cover13, .Cover14 {
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     }
-
 }
 
 @media (min-width: 630px) {
     .products-render {
         display: flex;
         padding-left: 10px;
+        padding-top: 2rem;
 
         .genres-container {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding-top: 2.2rem;
 
             & h2 {
                 font-size: clamp(1.9375rem, 1.6597rem + 1.2346vw, 3.1875rem);
@@ -69,6 +78,7 @@
         }
 
         .products-container {
+            padding-top: 0;
             padding-left: 0;
             padding-right: 0;
             flex: 1;
@@ -78,14 +88,14 @@
 
 
 @media (min-width: 845px) {
-
     .products-render {
-
+        padding-top: 3rem;
+        gap: 3.5rem;
         .products-container {
             flex-direction: row;
             flex-wrap: wrap;
+            gap: 2.3rem;
         }
     }
     
 }
-
