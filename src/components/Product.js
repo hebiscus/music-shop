@@ -13,12 +13,11 @@ function Product(props) {
     return (
         <div className="product-render">
             <div id="background-color"></div>
-            <button onClick={() => navigate(-1)}>Go Back</button>
+            <button onClick={() => navigate(-1)}>&#60; Go Back</button>
             <div className="product-container">
                 <img 
-
                     src={productData.coverSmall} 
-                    alt={productData.productTitle}>
+                    alt={productData.title}>
                 </img>
                 <h3>{productTitle}</h3>
                 <p>{productData.description}</p>
