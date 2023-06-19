@@ -7,7 +7,8 @@ const cdData = [
      coverSmall: "/cd-covers/blueCD-small.png",
      coverMedium: "/cd-covers/blueCD-mid.png",
      coverBig: "/cd-covers/blueCD-big.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "30.00"},
 
      {title: "Clipping - There existed an addiction to blood",
@@ -16,7 +17,8 @@ const cdData = [
      coverSmall: "/cd-covers/redCD-small.png",
      coverMedium: "/cd-covers/redCD-mid.png",
      coverBig: "/cd-covers/blueCD.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "26.90"},
 
      {title: "Susumu Hirasawa - BERSERK Original Sountrack",
@@ -25,7 +27,8 @@ const cdData = [
      coverSmall: "/cd-covers/redwhiteCD-small.png",
      coverMedium: "/cd-covers/redwhiteCD-mid.png",
      coverBig: "/cd-covers/redwhiteCD-big.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "50.00"},
 
      {title: "Harold Budd Brian Eno - Ambient 2: The Plateaux of Mirror",
@@ -34,7 +37,8 @@ const cdData = [
      coverSmall: "/cd-covers/desertCD-small.png",
      coverMedium: "/cd-covers/desertCD-mid.png",
      coverBig: "/cd-covers/desertCD-big.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "3.00"},
 
      {title: "JPEGMAFIA - Veteran",
@@ -43,7 +47,8 @@ const cdData = [
      coverSmall: "/cd-covers/darkCD-small.png",
      coverMedium: "/cd-covers/darkCD-mid.png",
      coverBig: "/cd-covers/darkCD-big.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "13.00"},
 
      {title: "New Order - Power Corruption and Lies",
@@ -52,7 +57,8 @@ const cdData = [
      coverSmall: "/cd-covers/whiteCD-small.png",
      coverMedium: "/cd-covers/whiteCD-mid.png",
      coverBig: "/cd-covers/blueCD.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "10.00"},
 
      {title: "Saint Etienne - Foxbase Alpha",
@@ -61,7 +67,8 @@ const cdData = [
      coverSmall: "/cd-covers/alienCD-small.png",
      coverMedium: "/cd-covers/alienCD-mid.png",
      coverBig: "/cd-covers/alienCD-big.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "18.00"},
 
      {title: "Björk - Verspertine",
@@ -70,7 +77,8 @@ const cdData = [
      coverSmall: "/cd-covers/stracciatella-small.png",
      coverMedium: "/cd-covers/stracciatella-mid.png",
      coverBig: "/cd-covers/stracciatella-big.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"}
 ]
 
@@ -81,7 +89,8 @@ const vinylData = [
     coverSmall: "/vinyl-covers/XTC-small.png",
     coverMediumHome: "/vinyl-covers/XTC-mid-home.png",
     coverMedium: "/vinyl-covers/XTC-mid-PR.png",
-    description: "ababa cnsdkc yes!",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
     price: "300.00"},
 
     {title: "Klark Kent - Don't Care",
@@ -90,7 +99,8 @@ const vinylData = [
      coverSmall: "/vinyl-covers/Klark-Kent-small.png",
      coverMediumHome: "/vinyl-covers/Klark-Kent-mid-home.png",
      coverMedium: "/vinyl-covers/Klark-Kent-mid-PR.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"},
 
      {title: "Jah Wurzel - Wuthering Heights",
@@ -99,7 +109,8 @@ const vinylData = [
      coverSmall: "/vinyl-covers/jah-wurzel-small.png",
      coverMediumHome: "/vinyl-covers/jah-wurzel-mid-home.png",
      coverMedium: "/vinyl-covers/jah-wurzel-mid-PR.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"},
 
      {title: "Snips - What's Your Number",
@@ -107,7 +118,8 @@ const vinylData = [
      genre: "math rock",
      coverSmall: "/vinyl-covers/Snips-small.png",
      coverMedium: "/vinyl-covers/Snips-mid.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"},
 
      {title: "Yellow Banana - Verspertine",
@@ -115,7 +127,8 @@ const vinylData = [
      genre: "art pop",
      coverSmall: "/vinyl-covers/blankV-small.png",
      coverMedium: "/vinyl-covers/blankV-mid.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"},
 
      {title: "Summon - My Mind is Blank",
@@ -123,7 +136,8 @@ const vinylData = [
      genre: "math rock",
      coverSmall: "/vinyl-covers/blankV-small.png",
      coverMedium: "/vinyl-covers/blankV-mid.png",
-     description: "ababa cnsdkc yes!",
+     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"}
 ]
 
