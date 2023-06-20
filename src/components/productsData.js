@@ -6,7 +6,8 @@ const cdData = [
      genre: "new wave",
      coverSmall: "/cd-covers/blueCD-small.png",
      coverMedium: "/cd-covers/blueCD-mid.png",
-     coverBig: "/cd-covers/blueCD-big.png",
+     coverProduct1: "/cd-covers/blueCD-pr1.png",
+     coverProduct2: "/cd-covers/blueCD-pr2.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "30.00"},
@@ -16,7 +17,8 @@ const cdData = [
      genre: "electroclash",
      coverSmall: "/cd-covers/redCD-small.png",
      coverMedium: "/cd-covers/redCD-mid.png",
-     coverBig: "/cd-covers/blueCD.png",
+     coverProduct1: "/cd-covers/redCD-pr1.png",
+     coverProduct2: "/cd-covers/redCD-pr2.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "26.90"},
@@ -26,7 +28,8 @@ const cdData = [
      genre: "synthpop",
      coverSmall: "/cd-covers/redwhiteCD-small.png",
      coverMedium: "/cd-covers/redwhiteCD-mid.png",
-     coverBig: "/cd-covers/redwhiteCD-big.png",
+     coverProduct1: "/cd-covers/redwhiteCD-pr1.png",
+     coverProduct2: "/cd-covers/redwhiteCD-pr2.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "50.00"},
@@ -36,7 +39,8 @@ const cdData = [
      genre: "ambient",
      coverSmall: "/cd-covers/desertCD-small.png",
      coverMedium: "/cd-covers/desertCD-mid.png",
-     coverBig: "/cd-covers/desertCD-big.png",
+     coverProduct1: "/cd-covers/desertCD-pr1.png",
+     coverProduct2: "/cd-covers/desertCD-pr2.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "3.00"},
@@ -46,7 +50,8 @@ const cdData = [
      genre: "math rock",
      coverSmall: "/cd-covers/darkCD-small.png",
      coverMedium: "/cd-covers/darkCD-mid.png",
-     coverBig: "/cd-covers/darkCD-big.png",
+     coverProduct1: "/cd-covers/darkCD-pr1.png",
+     coverProduct2: "/cd-covers/darkCD-pr2.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "13.00"},
@@ -56,7 +61,8 @@ const cdData = [
      genre: "new wave",
      coverSmall: "/cd-covers/whiteCD-small.png",
      coverMedium: "/cd-covers/whiteCD-mid.png",
-     coverBig: "/cd-covers/blueCD.png",
+     coverProduct1: "/cd-covers/whiteCD-pr1.png",
+     coverProduct2: "/cd-covers/whiteCD-pr2.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "10.00"},
@@ -66,7 +72,8 @@ const cdData = [
      genre: "synthpop",
      coverSmall: "/cd-covers/alienCD-small.png",
      coverMedium: "/cd-covers/alienCD-mid.png",
-     coverBig: "/cd-covers/alienCD-big.png",
+     coverProduct1: "/cd-covers/alienCD-pr1.png",
+     coverProduct2: "/cd-covers/alienCD-pr2.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "18.00"},
@@ -76,7 +83,8 @@ const cdData = [
      genre: "art pop",
      coverSmall: "/cd-covers/stracciatella-small.png",
      coverMedium: "/cd-covers/stracciatella-mid.png",
-     coverBig: "/cd-covers/stracciatella-big.png",
+     coverProduct1: "/cd-covers/stracciatella-pr1.png",
+     coverProduct2: "/cd-covers/stracciatella-pr2.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"}
@@ -89,6 +97,8 @@ const vinylData = [
     coverSmall: "/vinyl-covers/XTC-small.png",
     coverMediumHome: "/vinyl-covers/XTC-mid-home.png",
     coverMedium: "/vinyl-covers/XTC-mid-PR.png",
+    coverProduct1: "/vinyl-covers/XTC-big.png",
+    coverProduct2: "/vinyl-covers/XTC-big.png",
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
     price: "300.00"},
@@ -99,6 +109,8 @@ const vinylData = [
      coverSmall: "/vinyl-covers/Klark-Kent-small.png",
      coverMediumHome: "/vinyl-covers/Klark-Kent-mid-home.png",
      coverMedium: "/vinyl-covers/Klark-Kent-mid-PR.png",
+     coverProduct1: "/vinyl-covers/Klark-Kent-big.png",
+    coverProduct2: "/vinyl-covers/Klark-Kent-big.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"},
@@ -109,6 +121,8 @@ const vinylData = [
      coverSmall: "/vinyl-covers/jah-wurzel-small.png",
      coverMediumHome: "/vinyl-covers/jah-wurzel-mid-home.png",
      coverMedium: "/vinyl-covers/jah-wurzel-mid-PR.png",
+     coverProduct1: "/vinyl-covers/jah-wurzel-big.png",
+     coverProduct2: "/vinyl-covers/jah-wurzel-big.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"},
@@ -118,6 +132,8 @@ const vinylData = [
      genre: "math rock",
      coverSmall: "/vinyl-covers/Snips-small.png",
      coverMedium: "/vinyl-covers/Snips-mid.png",
+     coverProduct1: "/vinyl-covers/Snips-big.png",
+     coverProduct2: "/vinyl-covers/Snips-big.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"},
@@ -127,6 +143,8 @@ const vinylData = [
      genre: "art pop",
      coverSmall: "/vinyl-covers/blankV-small.png",
      coverMedium: "/vinyl-covers/blankV-mid.png",
+     coverProduct1: "/vinyl-covers/blankV-big.png",
+     coverProduct2: "/vinyl-covers/blankV-big.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"},
@@ -136,6 +154,8 @@ const vinylData = [
      genre: "math rock",
      coverSmall: "/vinyl-covers/blankV-small.png",
      coverMedium: "/vinyl-covers/blankV-mid.png",
+     coverProduct1: "/vinyl-covers/blankV-big.png",
+     coverProduct2: "/vinyl-covers/blankV-big.png",
      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
      price: "300.00"}
