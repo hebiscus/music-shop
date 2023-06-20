@@ -6,20 +6,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BoughtProductsContext } from '../App';
  
 const NavIcon = styled(Link)`
-  margin-left: 2rem;
-  font-size: 2rem;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  height: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
+  width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
+  margin-top: 10px;
+  align-self: end;
+  margin-right: 10px;
 `;
  
-const SidebarNav = styled.nav`
+const SidebarNav = styled.nav.attrs({
+  id: "sidebar-content",
+})`
   background: #15171c7d;
-  width: 250px;
+  width: 40%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
   position: fixed;
   top: 0;
   right: ${props => props.$sidebar ? '0' : '-100%'};
@@ -27,8 +26,13 @@ const SidebarNav = styled.nav`
   z-index: 10;
 `;
  
-const SidebarWrap = styled.div`
+const SidebarWrap = styled.div.attrs({
+  className: "sidebar-wrapper",
+})`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 `;
 
 const Sidebar = () => {
@@ -44,14 +48,16 @@ const Sidebar = () => {
           </button>
         <SidebarNav $sidebar={sidebar}>
             <SidebarWrap>
-              <NavIcon to="#">
+              <NavIcon to="#" className='sidebar-icon'>
                 <FontAwesomeIcon icon={faBasketShopping} style={{color: "#ffffff",}} onClick={showSidebar} />
               </NavIcon>
               {boughtProducts.map((product, index) => {
                 return <div key={index} className='boughtProduct-container'>
-                  <h5>{product.title}</h5>
-                  <h5>{product.price}</h5>
-                  <button onClick={() => deleteFromCart(product)}>Delete</button>  
+                  <p>{product.title}</p>
+                  <div className="bought-style">
+                    <p>{`${product.price} $`}</p>
+                    <button onClick={() => deleteFromCart(product)}>Delete</button>
+                  </div> 
                 </div>
               })}
               <div className='checkout-container'>
