@@ -5,7 +5,9 @@ import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BoughtProductsContext } from '../App';
  
-const NavIcon = styled(Link)`
+const NavIcon = styled(Link).attrs({
+  id: "sidebar-icon",
+})`
   height: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
   width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
   margin-top: 10px;

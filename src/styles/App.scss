@@ -36,31 +36,37 @@
 
     > p:first-of-type {
         font-weight: 600;
-        font-size: clamp(0.9375rem, 0.6597rem + 1.2346vw, 2.1875rem);
+        font-size: clamp(0.9375rem, 0.6597rem + 1.2346vw, 1.6rem);
     }
 
     .bought-style {
         display: flex;
         justify-content: space-between;
-        font-size: clamp(0.9375rem, 0.6597rem + 1.2346vw, 2.1875rem);
+        font-size: clamp(0.9375rem, 0.6597rem + 1.2346vw, 1.6rem);
     }
 }
 
 .checkout-container {
+    text-align: center;
     > button {
         color: variables.$font-color;
         @include mixins-functions.clearButton;
-        font-size: clamp(1.25rem, 0.9722rem + 1.2346vw, 2.5rem);
+        font-size: clamp(1.25rem, 0.9722rem + 1.2346vw, 2.3rem);
     }
 
     > h4 {
-        font-size: clamp(1.25rem, 0.9722rem + 1.2346vw, 2.5rem);
+        font-size: clamp(1.25rem, 0.9722rem + 1.2346vw, 2.3rem);
+        background-color: #53565a82;
     }
 }
 
 @media (min-width: 900px) {
     #sidebar-content {
-        width: 30%;
+        width: 25%;
+    }
+
+    #sidebar-icon {
+        margin-top: 13px;
     }
 
    .sidebar-wrapper {
@@ -69,13 +75,18 @@
 
    .checkout-container {
         margin-top: auto;
-        align-self: center;
    }
 }
 
 @media (min-width: 1180px) {
     #sidebar-content {
-        width: 20%;
+        width: 16%;
+    }
+}
+
+@media (min-width: 1371px) {
+    #sidebar-icon {
+        margin-top: 17px;
     }
 }
 
