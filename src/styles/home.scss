@@ -92,6 +92,10 @@
 }
 
 #background-video {
+    display: none;
+}
+
+#background-photo {
     position: fixed;
     z-index: -1;
     top: 0;
@@ -102,11 +106,24 @@
 }
 
 @media (min-width: 937px) {
+    #background-video {
+        display:block;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #background-photo {
+        display: none;
+    }
+
     .special-offers {
         flex-direction: row;
         align-items: center;
-        // padding-left: 8rem;
-        // padding-right: 8rem;
         padding-top: 3rem;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -114,8 +131,6 @@
 
         .offer-info {
             gap: 2.2rem;
-            // padding-left: 7.5rem;
-            // padding-right: 7.5rem;
             text-align: center;
             align-items: center;
         }

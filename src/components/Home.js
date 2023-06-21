@@ -10,6 +10,7 @@
             <video id="background-video" autoPlay loop muted>
                 <source src={backgroundVideo} type="video/mp4"/>
             </video>
+            <img id="background-photo" src="backgroundPhones.png" alt="background"></img>
             <SpecialOffers offers={vinylData} />
             <div className="additional-info">
                 <div>
