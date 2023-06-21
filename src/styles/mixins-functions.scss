@@ -21,3 +21,10 @@
     z-index: -1;
 }
 
+@mixin buttonStyling() {
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+

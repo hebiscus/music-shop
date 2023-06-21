@@ -1,4 +1,5 @@
 @use "variables";
+@use 'mixins-functions';
 
 $icons-height: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
 $icons-width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
@@ -63,7 +64,9 @@ $icons-width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
         height: $icons-height;
         width: $icons-width;
         
-        & * {
+        
+        > svg {
+            @include mixins-functions.buttonStyling;
             width: $icons-width;
             height: $icons-height;
         }

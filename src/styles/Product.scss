@@ -15,6 +15,7 @@
     & button {
         color: inherit;
         @include mixins-functions.clearButton();
+        @include mixins-functions.buttonStyling;
         font-size: clamp(1.4375rem, 1.2569rem + 0.8025vw, 2.25rem);
     }
 
@@ -50,6 +51,7 @@
             }
 
             > button {
+                @include mixins-functions.buttonStyling;
                 font-weight: 700; 
 
                 > svg {

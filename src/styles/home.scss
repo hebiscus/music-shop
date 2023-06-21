@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'mixins-functions';
 
 .special-offers {
     display: flex;
@@ -11,6 +12,7 @@
         align-items: center; 
 
         .slider-arrows {
+            @include mixins-functions.buttonStyling;
             height: clamp(2rem, 5.5vw, 4rem);
 
             & svg {
@@ -87,6 +89,7 @@
             border-radius: 5px;
             box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 1);
             gap: 5px;
+            @include mixins-functions.buttonStyling;
         }
     }
 }

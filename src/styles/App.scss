@@ -20,6 +20,15 @@
 .sidebar-icon > svg {
     height: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
     width: clamp(1.875rem, 0.962vw + 1.659rem, 2.813rem);
+    @include mixins-functions.buttonStyling;
+}
+
+.numberOfProducts {
+    position: relative;
+    z-index: 20;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .boughtProduct-container {
@@ -30,6 +39,7 @@
     & button {
         color: variables.$font-color;
         @include mixins-functions.clearButton;
+        @include mixins-functions.buttonStyling;
         align-self: flex-end;
         font-weight: 500;
     }
@@ -51,7 +61,11 @@
     > button {
         color: variables.$font-color;
         @include mixins-functions.clearButton;
+        @include mixins-functions.buttonStyling;
         font-size: clamp(1.25rem, 0.9722rem + 1.2346vw, 2.3rem);
+        &:hover {
+            color: hotpink;
+        }
     }
 
     > h4 {

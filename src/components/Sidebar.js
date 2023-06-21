@@ -46,7 +46,8 @@ const Sidebar = () => {
    
     return (
       <>  <button className='toogle-cart-btn'>
-          <FontAwesomeIcon icon={faBasketShopping} style={{color: "#ffffff",}} onClick={showSidebar} />
+            <FontAwesomeIcon icon={faBasketShopping} style={{color: "#ffffff",}} onClick={showSidebar} />
+            <div className='numberOfProducts'>{boughtProducts.length}</div>
           </button>
         <SidebarNav $sidebar={sidebar}>
             <SidebarWrap>
